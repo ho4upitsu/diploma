@@ -1,12 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
+const MainRoute = require("./route/main");
 
 dotenv.config();
 
 const app = express();
-
-console.log(process.env.MONGO_URL);
+app.use(express.json());
+app.use("/", MainRoute);
 
 mongoose
     .connect(process.env.MONGO_URL)
