@@ -1,6 +1,6 @@
-import styles from "./LoginForm.module.css";
+import styles from "./RegisterForm.module.css";
 
-function LoginForm() {
+function RegisterForm() {
     return (
         <div className={styles.loginContainer}>
             <h1 className={styles.header}>Log In</h1>
@@ -27,12 +27,12 @@ function LoginForm() {
                     placeholder="Confirm Password"
                 />
                 <div className={styles.buttonContainer}>
+                    <button className={styles.button}>Register</button>
                     <button className={styles.button}>Log in</button>
-                    <button className={styles.button}>Not registered</button>
                 </div>
             </form>
         </div>
     );
 }
 
-export default LoginForm;
+export default RegisterForm;
