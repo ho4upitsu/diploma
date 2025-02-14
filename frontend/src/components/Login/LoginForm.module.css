@@ -1,0 +1,40 @@
+.loginContainer {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 20px;
+}
+
+.input {
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    padding-left: 15px;
+    outline: none;
+}
+
+.input::placeholder {
+    color: gray;
+    opacity: 0.8;
+}
+
+.header {
+    padding-top: 20px;
+    color: #b0b0b0;
+}
+
+.submitButton {
+    background-color: #e63946;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 16px;
+}
