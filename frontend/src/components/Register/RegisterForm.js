@@ -8,11 +8,6 @@ function RegisterForm() {
             <form className={styles.loginForm}>
                 <input
                     className={styles.input}
-                    type="text"
-                    placeholder="Username"
-                />
-                <input
-                    className={styles.input}
                     type="email"
                     placeholder="Email"
                 />
@@ -20,11 +15,6 @@ function RegisterForm() {
                     className={styles.input}
                     type="password"
                     placeholder="Password"
-                />
-                <input
-                    className={styles.input}
-                    type="password"
-                    placeholder="Confirm Password"
                 />
                 <div className={styles.buttonContainer}>
                     <button className={styles.button}>Register</button>
