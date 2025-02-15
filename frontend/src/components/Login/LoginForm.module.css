@@ -2,6 +2,8 @@
     background-color: #1e1e1e;
     border-radius: 16px;
     box-shadow: #e63946 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .loginForm {
@@ -29,6 +31,7 @@
 .header {
     padding-top: 20px;
     color: #b0b0b0;
+    margin: auto;
 }
 
 .button {
