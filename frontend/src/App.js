@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register";
 import "./App.css";
 import CodeEditor from "./pages/CodeEditor/CodeEditor";
 import TestTasks from "./components/TestTasks/TestTasks";
+import Modules from "./pages/Modules/Modules";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/editor" element={<CodeEditor />} />
+                    <Route path="/modules" element={<Modules />} />
                     <Route path="/test" element={<TestTasks />} />
                 </Routes>
             </div>
