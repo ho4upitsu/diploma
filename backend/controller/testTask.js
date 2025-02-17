@@ -38,6 +38,19 @@ const getTestTask = async (req, res) => {
     }
 };
 
+const getAllTestTasks = async (req, res) => {
+    try {
+        const testTasks = await TestTask.find();
+        if (!testTasks) {
+            return res.status(404).json({ error: "Test tasks not found" });
+        }
+        res.status(200).json(testTasks);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
 const deleteTestTask = async (req, res) => {
     try {
         const { id } = req.params;
@@ -52,4 +65,9 @@ const deleteTestTask = async (req, res) => {
     }
 };
 
-module.exports = { createTestTask, getTestTask, deleteTestTask };
+module.exports = {
+    createTestTask,
+    getTestTask,
+    deleteTestTask,
+    getAllTestTasks,
+};
