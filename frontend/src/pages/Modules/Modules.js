@@ -4,7 +4,6 @@ function Modules() {
     return (
         <>
             <Topbar />
-            <h1>Modules page</h1>
             <ModulesComponent />
         </>
     );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Module from "./Module/Module";
+import styles from "./Modules.module.css";
 
 function Modules() {
     const [modules, setModules] = useState([]);
@@ -19,12 +20,11 @@ function Modules() {
             .catch((error) => console.error(error));
     }, []);
     return (
-        <>
-            <h1>Modules component</h1>
+        <div className={styles.modulesContainer}>
             {modules.map((module) => (
                 <Module key={module._id} module={module} />
             ))}
-        </>
+        </div>
     );
 }
 
