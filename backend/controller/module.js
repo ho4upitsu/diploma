@@ -2,8 +2,8 @@ const Module = require("../model/module");
 
 const createModule = async (req, res) => {
     try {
-        const { name, difficulty } = req.body;
-        const module = new Module({ name, difficulty });
+        const { name, description, difficulty } = req.body;
+        const module = new Module({ name, description, difficulty });
         await module.save();
         return res.status(201).json(module);
     } catch (error) {
