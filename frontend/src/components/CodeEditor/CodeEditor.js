@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
+import styles from "./CodeEditor.module.css";
 
 const CodeEditor = () => {
     const [code, setCode] = useState("// Напишіть свій код тут");
@@ -24,13 +25,13 @@ const CodeEditor = () => {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <h1>Code Editor</h1>
             <MonacoEditor
                 height="60vh"
-                width="100vh"
                 language="javascript"
                 theme="vs-dark"
+                className={styles.editor}
                 defaultValue="// Напишіть свій код тут"
                 onChange={handleEditorChange}
                 options={{ selectOnLineNumbers: true, automaticLayout: true }}

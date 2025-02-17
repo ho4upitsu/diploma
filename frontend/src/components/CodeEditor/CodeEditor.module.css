@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Займає всю висоту екрану */
+    width: 100%; /* Повна ширина */
+    text-align: center;
+}
+
+.editor {
+    width: 50%; /* Задаємо ширину редактора */
+    max-width: 800px; /* Максимальна ширина редактора */
+    margin: 0 auto;
+    margin-bottom: 20px; /* Відступ від кнопки */
+}

@@ -3,7 +3,7 @@ import Main from "./pages/Main/Main";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import "./App.css";
-import CodeEditor from "./components/CodeEditor/CodeEditor";
+import CodeEditor from "./pages/CodeEditor/CodeEditor";
 import TestTasks from "./components/TestTasks/TestTasks";
 
 function App() {
