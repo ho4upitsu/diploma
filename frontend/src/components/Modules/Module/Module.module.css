@@ -9,9 +9,27 @@
 .moduleHeader {
     color: #b0b0b0;
     font-size: 40px;
+    margin-bottom: 0;
 }
 
 .moduleDescription {
     color: #ffffff;
     font-size: 26px;
+    margin-top: 0;
+}
+
+.difficultyContainer {
+    display: flex;
+    align-items: center;
+}
+
+.difficultyIcon {
+    width: 32px; /* Задайте розмір картинки */
+    height: 32px; /* Задайте висоту, якщо потрібно */
+    margin-right: 8px;
+}
+
+.difficultyText {
+    color: #b0b0b0;
+    font-size: 16px;
 }
