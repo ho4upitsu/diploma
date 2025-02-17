@@ -10,8 +10,9 @@ function Topbar() {
                 placeholder="Search..."
             />
             <div className={styles.links}>
-                <span className={styles.link}>Homepage</span>
-                <span className={styles.link}>Timeline</span>
+                <span className={styles.link}>Top Programmers</span>
+                <span className={styles.link}>Modules</span>
+                <span className={styles.link}>Profile</span>
             </div>
         </div>
     );
