@@ -4,6 +4,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import "./App.css";
 import CodeEditor from "./components/CodeEditor/CodeEditor";
+import TestTasks from "./components/TestTasks/TestTasks";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/editor" element={<CodeEditor />} />
+                    <Route path="/test" element={<TestTasks />} />
                 </Routes>
             </div>
         </BrowserRouter>
