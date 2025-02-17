@@ -1,0 +1,17 @@
+.moduleContainer {
+    background-color: #1e1e1e;
+    padding: 10px 60px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+}
+
+.moduleHeader {
+    color: #b0b0b0;
+    font-size: 40px;
+}
+
+.moduleDescription {
+    color: #ffffff;
+    font-size: 26px;
+}
