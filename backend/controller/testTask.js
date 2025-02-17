@@ -65,9 +65,31 @@ const deleteTestTask = async (req, res) => {
     }
 };
 
+const checkTask = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { answer } = req.body;
+
+        const testTask = await TestTask.findById(id);
+        if (!testTask) {
+            return res.status(404).json({ message: "Test task not found" });
+        }
+        if (!answer) {
+            return res.status(400).json({ message: "Answer is required" });
+        }
+        if (answer === testTask.correctAnswer) {
+            return res.status(200).json({ message: "Correct answer" });
+        }
+        return res.status(400).json({ message: "Incorrect answer" });
+    } catch (error) {
+        return res.status(500).json({ message: "Server error" });
+    }
+};
+
 module.exports = {
     createTestTask,
     getTestTask,
     deleteTestTask,
     getAllTestTasks,
+    checkTask,
 };
