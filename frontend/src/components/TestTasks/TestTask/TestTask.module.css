@@ -1,0 +1,8 @@
+.taskOption {
+    color: white;
+}
+
+.taskOptionsContainer {
+    display: flex;
+    flex-direction: column;
+}
