@@ -1,6 +1,6 @@
 import styles from "./TestTask.module.css";
 
-function TestTask({ task }) {
+function TestTask({ task, onAnswerChange }) {
     return (
         <li className="taskItem">
             <h2 className={styles.taskHeader}>{task.title}</h2>
@@ -9,8 +9,11 @@ function TestTask({ task }) {
                     <label key={index} className={styles.taskOption}>
                         <input
                             type="radio"
-                            name={`option-${task._id}`} // Тепер кожен task має унікальне ім'я групи
+                            name={`option-${task._id}`}
                             value={option.option}
+                            onChange={(e) =>
+                                onAnswerChange(task._id, e.target.value)
+                            }
                         />
                         {option.option}
                     </label>
