@@ -2,6 +2,7 @@ const router = require("express").Router();
 const testTaskController = require("../controller/testTask");
 
 router.post("/createTestTast", testTaskController.createTestTask);
+router.get("/getAllTestTasks", testTaskController.getAllTestTasks);
 router.get("/getTestTask/:id", testTaskController.getTestTask);
 router.delete("/deleteTestTask/:id", testTaskController.deleteTestTask);
 
