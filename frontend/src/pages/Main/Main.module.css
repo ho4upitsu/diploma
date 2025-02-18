@@ -1,0 +1,20 @@
+.helloContainer {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto; /* Це центрує блок по горизонталі */
+    width: 50%;
+}
+
+.helloHeader {
+    color: white;
+}
+
+.helloText {
+    color: white;
+}

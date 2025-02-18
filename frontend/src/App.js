@@ -6,6 +6,7 @@ import "./App.css";
 import CodeEditor from "./pages/CodeEditor/CodeEditor";
 import TestTasks from "./components/TestTasks/TestTasks";
 import Modules from "./pages/Modules/Modules";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/editor" element={<CodeEditor />} />
                     <Route path="/modules" element={<Modules />} />
                     <Route path="/test" element={<TestTasks />} />
+                    <Route path="/profile" element={<Profile />} />
                 </Routes>
             </div>
         </BrowserRouter>
