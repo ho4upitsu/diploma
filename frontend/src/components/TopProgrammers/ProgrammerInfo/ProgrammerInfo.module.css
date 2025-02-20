@@ -1,16 +1,29 @@
+.topProgrammersContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Вирівнювання по центру */
+    justify-content: space-between; /* Рівномірний розподіл */
+    height: 100vh; /* Розтягуємо на всю висоту екрану */
+}
+
+.programmerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Або фіксована ширина, наприклад, max-width: 500px */
+}
+
 .programmerContainer {
-    background-color: #1e1e1e;
+    width: 100%;
+    max-width: 450px;
     padding: 10px 60px;
-    margin-bottom: 50px;
-    border-radius: 16px;
-    box-shadow: #e63946 0px 7px 29px 0px;
     display: flex;
     align-items: center;
-    gap: 120px;
+    justify-content: space-between;
+    background-color: #1e1e1e;
 }
 
 .placeIcon {
-    width: 48px; /* Задайте розмір картинки */
-    height: 48px; /* Задайте висоту, якщо потрібно */
-    margin-right: 8px;
+    width: 48px;
+    height: 48px;
 }

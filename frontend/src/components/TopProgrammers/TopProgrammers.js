@@ -19,15 +19,16 @@ const sortedUsers = users.sort((a, b) => b.points - a.points);
 function TopProgrammers() {
     return (
         <div className={styles.topProgrammersContainer}>
-            <h1 className={styles.topProgrammersHeader}>Top Programmers</h1>
-            {sortedUsers.map((user, index) => (
-                <ProgrammerInfo
-                    username={user.username}
-                    points={user.points}
-                    place={index + 1}
-                    key={user.username}
-                />
-            ))}
+            <div className={styles.programmerItem}>
+                {sortedUsers.map((user, index) => (
+                    <ProgrammerInfo
+                        username={user.username}
+                        points={user.points}
+                        place={index + 1}
+                        key={user.username}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
