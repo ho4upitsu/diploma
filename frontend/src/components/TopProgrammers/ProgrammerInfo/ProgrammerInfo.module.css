@@ -1,0 +1,16 @@
+.programmerContainer {
+    background-color: #1e1e1e;
+    padding: 10px 60px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.placeIcon {
+    width: 48px; /* Задайте розмір картинки */
+    height: 48px; /* Задайте висоту, якщо потрібно */
+    margin-right: 8px;
+}
