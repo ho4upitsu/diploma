@@ -1,0 +1,44 @@
+.profilePicture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileHeader {
+    color: #b0b0b0;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.profileText {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.profileLinks {
+    color: #b0b0b0;
+    font-size: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.profileComponentContainer {
+    background-color: #1e1e1e;
+    padding: 10px 60px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
