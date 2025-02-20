@@ -1,0 +1,36 @@
+.userStastContainer {
+    background-color: #1e1e1e;
+    padding: 10px 60px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.profilePicture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userStatsHeader {
+    color: #b0b0b0;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.profileText {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.userStatsItems {
+    color: #b0b0b0;
+    font-size: 20px;
+    list-style: none;
+    padding: 0;
+}
