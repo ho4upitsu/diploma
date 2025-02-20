@@ -1,0 +1,19 @@
+.topProgrammersContainer {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центруємо контент */
+    width: 30vw; /* Збільшив ширину, щоб було більше місця */
+    margin: 0 auto; /* Центруємо контейнер */
+    padding: 20px; /* Додали відступи */
+}
+
+.programmerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центруємо контент по горизонталі */
+    justify-content: center; /* Центруємо по вертикалі */
+    width: 100%;
+}
