@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ModulesComponent from "../../components/Modules/Modules";
 import Topbar from "../../components/Topbar/Topbar";
-// import Sidebar from "../../components/Sidebar/Sidebar"; // Додаємо ще один компонент
+import ModulesText from "../../components/ModulesText/ModulesText";
 import styles from "./Modules.module.css"; // Підключаємо стилі
 
 function Modules() {
@@ -18,9 +18,11 @@ function Modules() {
         <div className={styles.pageContainer}>
             <Topbar />
             <div className={styles.content}>
-                {/* <Sidebar /> Наприклад, меню зліва */}
                 <div className={styles.modulesWrapper}>
                     <ModulesComponent />
+                </div>
+                <div className={styles.modulesTextWrapper}>
+                    <ModulesText />
                 </div>
             </div>
         </div>

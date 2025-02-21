@@ -8,6 +8,8 @@
     display: flex;
     flex: 1; /* Розтягуємо на всю доступну площу */
     /* padding-top: 60px; Відступ під Topbar */
+    margin: 0 100px;
+    gap: 40px;
 }
 
 .modulesWrapper {
@@ -26,9 +28,17 @@
 .modulesWrapper::after {
     content: "";
     display: block;
-    height: 20vh; /* Регулюй за потреби */
+    height: 18.5vh; /* Регулюй за потреби */
 }
 
 .no-scroll {
     overflow: hidden;
+}
+
+/* Стилі для ModulesText */
+.modulesTextWrapper {
+    flex: 0 0 30%; /* Створюємо простір для тексту */
+    padding: 20px;
+    height: 100%; /* Забезпечуємо, щоб текст був на всю висоту */
+    overflow-y: auto;
 }
