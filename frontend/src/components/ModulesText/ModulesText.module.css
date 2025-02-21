@@ -1,0 +1,31 @@
+.modulesContainer {
+    background-color: #1e1e1e;
+    padding: 10px 60px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    box-shadow: #e63946 0px 7px 29px 0px;
+}
+
+.modulesHeader {
+    color: #b0b0b0;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.modulesText {
+    color: #ffffff;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.modulesText:last-child {
+    margin-bottom: 30px;
+}
+
+.modulesList {
+    color: #b0b0b0;
+    font-size: 20px;
+    list-style: none;
+    padding: 0;
+}
