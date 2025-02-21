@@ -1,0 +1,34 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Займає всю висоту екрану */
+}
+
+.content {
+    display: flex;
+    flex: 1; /* Розтягуємо на всю доступну площу */
+    /* padding-top: 60px; Відступ під Topbar */
+}
+
+.modulesWrapper {
+    flex: 1;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding: 10px;
+    scrollbar-width: none;
+}
+
+.modulesWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Псевдоелемент для відступу знизу */
+.modulesWrapper::after {
+    content: "";
+    display: block;
+    height: 20vh; /* Регулюй за потреби */
+}
+
+.no-scroll {
+    overflow: hidden;
+}
