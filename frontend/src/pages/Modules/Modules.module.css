@@ -9,7 +9,7 @@
     flex: 1; /* Розтягуємо на всю доступну площу */
     /* padding-top: 60px; Відступ під Topbar */
     margin: 0 100px;
-    gap: 40px;
+    gap: 100px;
 }
 
 .modulesWrapper {
