@@ -19,5 +19,14 @@ const testTaskSchema = new mongoose.Schema({
     },
 });
 
-const TestTask = mongoose.model("TestTask", testTaskSchema);
-module.exports = TestTask;
+const testGroupSchema = new mongoose.Schema({
+    moduleId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Module",
+        required: true,
+    },
+    tests: [testTaskSchema],
+});
+
+const TestGroup = mongoose.model("TestGroup", testGroupSchema);
+module.exports = TestGroup;
