@@ -62,6 +62,19 @@ const getTaskGroup = async (req, res) => {
     }
 };
 
+const getTaskGropsByModuleId = async (req, res) => {
+    try {
+        const taskGroups = await TaskGroup.find({ moduleId: req.params.id });
+        if (!taskGroups) {
+            return res.status(404).json({ error: "Test tasks not found" });
+        }
+        res.status(200).json(taskGroups);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
 const getAllTaskGroups = async (req, res) => {
     try {
         const taskGroups = await TaskGroup.find();
@@ -93,4 +106,5 @@ module.exports = {
     createTaskGroup,
     getTaskGroup,
     getAllTaskGroups,
+    getTaskGropsByModuleId,
 };
