@@ -7,7 +7,7 @@ import { CodeeditorModule } from './codeeditor/codeeditor.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://diploma:diploma@diploma.equ1p.mongodb.net/?retryWrites=true&w=majority&appName=diploma',
+      'as',
     ),
     UsersModule,
     ModulesModule,
