@@ -21,10 +21,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
-<<<<<<< HEAD
     "@nestjs/config": "^4.0.1",
-=======
->>>>>>> 3c74bed (switch from express to nest.js)
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^11.0.1",
