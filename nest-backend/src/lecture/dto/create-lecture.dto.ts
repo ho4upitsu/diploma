@@ -1,7 +1,7 @@
 import { IsString, IsNotEmpty } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateTestTaskDto {
+export class CreateLectureDto {
   @ApiProperty({
     example: '67b3485fa3b63f2adbe1f3b5',
     description: 'Module ID',
@@ -11,26 +11,18 @@ export class CreateTestTaskDto {
   module_id: string;
 
   @ApiProperty({
-    example: 'Test Task 1',
-    description: 'Test Task Name',
+    example: 'Lecture 1',
+    description: 'Lecture Name',
   })
   @IsString()
   @IsNotEmpty()
   name: string;
 
   @ApiProperty({
-    example: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
-    description: 'Test Task Options',
+    example: 'Content for Lecture 1',
+    description: 'Lecture Content',
   })
   @IsString()
   @IsNotEmpty()
-  options: string[];
-
-  @ApiProperty({
-    example: 'Option 1',
-    description: 'Correct Answer',
-  })
-  @IsString()
-  @IsNotEmpty()
-  correct_answer: string;
+  content: string;
 }
