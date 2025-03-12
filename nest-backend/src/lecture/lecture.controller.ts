@@ -16,12 +16,17 @@ export class LectureController {
     return this.lectureService.findAll();
   }
 
-  @Get(':id')
+  @Get('/getLecture/:id')
   findOne(@Param('id') id: string) {
     return this.lectureService.findOne(id);
   }
 
-  @Delete(':id')
+  @Get('/getLectureForModule/:id')
+  findLectureForModule(@Param('id') id: string) {
+    return this.lectureService.findLectureForModule(id);
+  }
+
+  @Delete('/deleteLecture/:id')
   remove(@Param('id') id: string) {
     return this.lectureService.remove(id);
   }

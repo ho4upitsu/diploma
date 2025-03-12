@@ -30,14 +30,10 @@ export class TestTaskController {
     return this.testTaskService.findOne(id);
   }
 
-  //TODO: this thing
-  // @Patch('/updateTestTask/:id')
-  // update(
-  //   @Param('id') id: string,
-  //   @Body() updateTestTaskDto: UpdateTestTaskDto,
-  // ) {
-  //   return this.testTaskService.update(id, updateTestTaskDto);
-  // }
+  @Get('/getTestTasksForModule/:id')
+  findTestTasksForModule(@Param('id') id: string) {
+    return this.testTaskService.findTestTasksForModule(id);
+  }
 
   @Delete('/deleteTestTask/:id')
   remove(@Param('id') id: string) {

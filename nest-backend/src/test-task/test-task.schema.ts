@@ -7,7 +7,6 @@ export type ModuleDocument = HydratedDocument<TestTask>;
 export class TestTask {
   @Prop({
     required: true,
-    unique: true,
   })
   module_id: Types.ObjectId;
 

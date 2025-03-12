@@ -62,9 +62,17 @@ export class TestTaskService {
     }
   }
 
-  // update(id: string, updateTestTaskDto: UpdateTestTaskDto) {
-  //   return `This action updates a #${id} testTask`;
-  // }
+  async findTestTasksForModule(module_id: string): Promise<TestTask[] | null> {
+    try {
+      const testTasks = await this.testTaskModel.find({ module_id }).exec();
+      if (!testTasks) {
+        throw new HttpException('Test tasks not found', HttpStatus.NO_CONTENT);
+      }
+      return testTasks;
+    } catch (error) {
+      throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
 
   async remove(id: string) {
     try {

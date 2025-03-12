@@ -19,6 +19,15 @@ export class LectureService {
       if (!module) {
         throw new HttpException('Module not found', HttpStatus.NOT_FOUND);
       }
+      const isLectureForModuleExists = await this.lectureModel.findOne({
+        module_id,
+      });
+      if (isLectureForModuleExists) {
+        throw new HttpException(
+          'Lecture for module already exists',
+          HttpStatus.BAD_REQUEST,
+        );
+      }
       const lecture = new this.lectureModel({
         module_id,
         name,
@@ -55,6 +64,17 @@ export class LectureService {
     }
   }
 
+  async findLectureForModule(module_id: string): Promise<Lecture | null> {
+    try {
+      const lecture = await this.lectureModel.findOne({ module_id }).exec();
+      if (!lecture) {
+        throw new HttpException('Lecture not found', HttpStatus.NOT_FOUND);
+      }
+      return lecture;
+    } catch (error) {
+      throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
   async remove(id: string): Promise<Lecture | null> {
     try {
       const lecture = await this.lectureModel.findByIdAndDelete(id).exec();
