@@ -8,7 +8,7 @@ function Modules() {
     const [selectedModule, setSelectedModule] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/module/getAllModules", {
+        fetch("http://localhost:5000/api/module/getAllModules", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -32,14 +32,18 @@ function Modules() {
 
     return (
         <div className={styles.modulesContainer}>
-            {modules.map((module) => (
-                <div key={module._id} onClick={() => handleModuleClick(module)}>
-                    <Module module={module} />
+            {console.log(modules)}
+            {modules.map((modules) => (
+                <div
+                    key={modules._id}
+                    onClick={() => handleModuleClick(modules)}
+                >
+                    <Module module={modules} />
                 </div>
             ))}
-            {selectedModule && (
+            {/* {selectedModule && (
                 <Modal module={selectedModule} onClose={closeModal} />
-            )}
+            )} */}
         </div>
     );
 }
