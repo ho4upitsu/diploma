@@ -23,7 +23,6 @@ function LoginForm() {
             if (!response.ok) {
                 throw new Error(data.message || "Something went wrong");
             }
-            console.log("User logged in: ", data);
             setPassword("");
             setEmail("");
         } catch (error) {}

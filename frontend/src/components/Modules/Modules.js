@@ -17,7 +17,6 @@ function Modules() {
             .then((response) => response.json())
             .then((data) => {
                 setModules(data);
-                console.log(data);
             })
             .catch((error) => console.error(error));
     }, []);
@@ -41,9 +40,9 @@ function Modules() {
                     <Module module={modules} />
                 </div>
             ))}
-            {/* {selectedModule && (
+            {selectedModule && (
                 <Modal module={selectedModule} onClose={closeModal} />
-            )} */}
+            )}
         </div>
     );
 }

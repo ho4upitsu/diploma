@@ -16,7 +16,6 @@ function TestTasks() {
             .then((response) => response.json())
             .then((data) => {
                 setTasks(data);
-                console.log(data);
             })
             .catch((error) => console.error(error));
     }, []);
@@ -46,8 +45,6 @@ function TestTasks() {
             const results = await Promise.all(
                 responses.map((res) => res.json())
             );
-
-            console.log("Results:", results);
         } catch (error) {
             console.error("Error submitting answers:", error);
         }

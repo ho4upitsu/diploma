@@ -32,8 +32,6 @@ function RegisterForm() {
                 throw new Error(data.message || "Something went wrong");
             }
 
-            console.log("User registered:", data);
-
             // Очищуємо поля після успішної реєстрації
             setUsername("");
             setEmail("");
