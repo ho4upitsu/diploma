@@ -16,10 +16,32 @@
     border-radius: 8px;
     max-width: 500px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+}
+.modalItem,
+.modalHeader {
+    width: 200px;
+    background-color: aqua;
+    margin: 8px;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-button {
+.modalItem {
+    cursor: pointer;
+}
+
+.buttonContainer {
     margin-top: 10px;
     padding: 5px 10px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

@@ -61,13 +61,26 @@ function Modal({ module, onClose }) {
                 className={styles.modalContent}
                 onClick={(e) => e.stopPropagation()}
             >
-                <div>{lectule.name}</div>
-                {tasks.map((tasks) => (
-                    <div key={tasks._id}>
+                <div className={styles.modalHeader}>
+                    <h2>{module.name}</h2>
+                </div>
+                <div className={styles.modalItem}>
+                    <h2>{lectule.name}</h2>
+                </div>
+                {/* {tasks.map((tasks) => (
+                    <div className={styles.modalItem} key={tasks._id}>
                         <h2>{tasks.name}</h2>
                     </div>
-                ))}
-                <button onClick={onClose}>Закрити</button>
+                ))} */}
+                <div className={styles.modalItem}>
+                    <h2>Тестові завдання</h2>
+                </div>
+                <div className={styles.modalItem}>
+                    <h2>Випробовування кодом</h2>
+                </div>
+                <div className={styles.buttonContainer}>
+                    <button onClick={onClose}>Закрити</button>
+                </div>
             </div>
         </div>
     );
