@@ -11,7 +11,6 @@ export class ModuleService {
   ) {}
 
   async create(createModuleDto: CreateModuleDto): Promise<Module> {
-    console.log(createModuleDto);
     const { name, description } = createModuleDto;
     const module = new this.moduleModel({ name, description });
     return module.save();
@@ -22,7 +21,6 @@ export class ModuleService {
   }
 
   async findOne(id: string): Promise<Module | null> {
-    console.log(id);
     const module = await this.moduleModel.findById(id).exec();
     if (!module) {
       throw new HttpException('Module not found', HttpStatus.NOT_FOUND);
