@@ -9,8 +9,8 @@ import {
   Param,
 } from '@nestjs/common';
 import { ModuleService } from './modules.service';
-import { CreateModuleDto } from './create-module.dto';
-import { Module } from './modules.schema';
+import { CreateModuleDto } from './dto/create-module.dto';
+import { Module } from './entities/modules.schema';
 
 @Controller('module')
 export class ModuleController {

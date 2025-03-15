@@ -1,9 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Lecture } from './lecture.schema';
+import { Lecture } from './entities/lecture.schema';
 import { Model } from 'mongoose';
 import { CreateLectureDto } from './dto/create-lecture.dto';
-import { Module } from '../module/modules.schema';
+import { Module } from '../module/entities/modules.schema';
 
 @Injectable()
 export class LectureService {

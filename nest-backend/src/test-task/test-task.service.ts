@@ -2,8 +2,8 @@ import { CreateTestTaskDto } from './dto/create-test-task.dto';
 import { UpdateTestTaskDto } from './dto/update-test-task.dto';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Module } from '../module/modules.schema';
-import { TestTask } from './test-task.schema';
+import { Module } from '../module/entities/modules.schema';
+import { TestTask } from './entities/test-task.schema';
 import { Model } from 'mongoose';
 
 @Injectable()

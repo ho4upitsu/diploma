@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { TestTaskService } from './test-task.service';
 import { TestTaskController } from './test-task.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ModuleSchema } from '../module/modules.schema';
-import { TestTaskSchema } from './test-task.schema';
+import { ModuleSchema } from '../module/entities/modules.schema';
+import { TestTaskSchema } from './entities/test-task.schema';
 
 @Module({
   imports: [
