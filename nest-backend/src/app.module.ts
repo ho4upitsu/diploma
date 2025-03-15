@@ -5,8 +5,7 @@ import { ModulesModule } from './module/modules.module';
 import { TestTaskModule } from './test-task/test-task.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LectureModule } from './lecture/lecture.module';
-import { LoggerMiddleware } from './middleware/logger.middleware';
-
+import { LoggerMiddleware } from './middlewares/logger.middleware';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }), // ОБОВ'ЯЗКОВО!
