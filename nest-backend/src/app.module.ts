@@ -6,6 +6,7 @@ import { TestTaskModule } from './test-task/test-task.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LectureModule } from './lecture/lecture.module';
 import { LoggerMiddleware } from './middlewares/logger.middleware';
+import { CodeTaskModule } from './code-task/code-task.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }), // ОБОВ'ЯЗКОВО!
@@ -20,6 +21,7 @@ import { LoggerMiddleware } from './middlewares/logger.middleware';
     ModulesModule,
     TestTaskModule,
     LectureModule,
+    CodeTaskModule,
   ],
 })
 export class AppModule implements NestModule {

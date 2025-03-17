@@ -15,27 +15,27 @@ import { UpdateTestTaskDto } from './dto/update-test-task.dto';
 export class TestTaskController {
   constructor(private readonly testTaskService: TestTaskService) {}
 
-  @Post('/createTestTask')
+  @Post('/create')
   create(@Body() createTestTaskDto: CreateTestTaskDto) {
     return this.testTaskService.create(createTestTaskDto);
   }
 
-  @Get('/getAllTestTasks')
+  @Get('/getAll')
   findAll() {
     return this.testTaskService.findAll();
   }
 
-  @Get('/getTestTask/:id')
+  @Get('/get/:id')
   findOne(@Param('id') id: string) {
     return this.testTaskService.findOne(id);
   }
 
-  @Get('/getTestTasksForModule/:id')
+  @Get('/getForModule/:id')
   findTestTasksForModule(@Param('id') id: string) {
     return this.testTaskService.findTestTasksForModule(id);
   }
 
-  @Delete('/deleteTestTask/:id')
+  @Delete('/delete/:id')
   remove(@Param('id') id: string) {
     return this.testTaskService.remove(id);
   }
